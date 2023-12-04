@@ -23,7 +23,7 @@ const createUser = async(req,res) =>{
             userId : user._id
         }
         const authToken = jwt.sign(data, jwtSecretKey, { expiresIn: '2h' });
-        res.json({user,authToken});
+        res.json({success:"User created",user,authToken});
         
     } catch (error) {
         console.log("Error :",error);
