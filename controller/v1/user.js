@@ -19,4 +19,15 @@ const createUser = async(req,res) =>{
     }
 }
 
-module.exports = {createUser};
+const listAllUsers = async(req,res) =>{
+    try{
+        const users =await User.find();
+        res.json(users);
+    }
+    catch(error){
+        console.log("Error",error);
+        res.json({message:"Something went wrong"})
+    }
+}
+
+module.exports = {createUser , listAllUsers};

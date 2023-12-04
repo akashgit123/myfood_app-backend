@@ -10,6 +10,7 @@ const userValidator = [
 ]
 
 router.post("/createUser",userValidator,userController.createUser);
+router.get("/listAllUsers",userController.listAllUsers);
 
 
 module.exports = router;
