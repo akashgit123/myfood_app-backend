@@ -11,7 +11,7 @@ const createUser = async(req,res) =>{
         const user = await User.create({
             name , email , location , password
         })
-        res.json({success:`user created : ${user.name}`});
+        res.json(user);
         
     } catch (error) {
         console.log("Error :",error);
