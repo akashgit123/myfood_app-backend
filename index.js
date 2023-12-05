@@ -13,6 +13,8 @@ app.use(cors())
 
 // routes
 app.use('/api/user',require('./routes/v1/user'));
+app.use('/api/foodData',require('./routes/v1/foodData'));
+app.use('/api/foodCategory',require('./routes/v1/foodCategory'));
 
 app.get('/',(req,res)=>{
     res.send("Working");
